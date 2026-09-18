@@ -1,0 +1,2 @@
+release: python manage.py migrate && python manage.py seed_from_pipeline && python manage.py collectstatic --noinput
+web: gunicorn chargeopt.wsgi:application --bind 0.0.0.0:$PORT

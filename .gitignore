@@ -7,6 +7,7 @@ __pycache__/
 venv/
 .env
 .env.*
+!.env.example
 
 # Django
 *.sqlite3
@@ -18,14 +19,17 @@ node_modules/
 .next/
 out/
 coverage/
+*.tsbuildinfo
 
 # OS/files
 .DS_Store
 Thumbs.db
 
 # Project data
-/data-pipeline/data/*.csv
-/data-pipeline/results/*.json
-/data-pipeline/results/*.geojson
+# NOTE: results.json, existing_stations.csv, and the cached raw OSM graphml ARE
+# committed on purpose — the deployed backend (see backend/Procfile's release
+# phase) reads/seeds from these frozen pipeline outputs rather than re-running
+# the full osmnx/Overpass fetch + MILP solve on every deploy.
+/data-pipeline/cache/
 /frontend/.env.local
 /backend/.env

@@ -1,8 +1,11 @@
+@import "leaflet/dist/leaflet.css";
+
 html, body {
   margin: 0;
   padding: 0;
   background: #f6f8fb;
   color: #111827;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 * {
@@ -11,8 +14,119 @@ html, body {
 
 main {
   min-height: 100vh;
+  padding: 1.5rem;
 }
 
-h1, h2, p, ul {
+h1, h2, h3, p, ul {
   margin-top: 0;
+}
+
+.app-shell {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.app-header {
+  margin-bottom: 1rem;
+}
+
+.app-header p {
+  color: #374151;
+}
+
+.layout-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .layout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.map-panel {
+  height: 560px;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-panel .map-inner {
+  flex: 1;
+  min-height: 0;
+}
+
+.budget-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.error-text {
+  color: #b91c1c;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+.muted-text {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.stat-grid {
+  display: grid;
+  gap: 6px;
+  margin: 0.5rem 0 1rem;
+  font-size: 0.92rem;
+}
+
+.layer-toggles {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 1rem;
+}
+
+.layer-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.candidate-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.candidate-table th {
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.4rem 0;
+}
+
+.candidate-table td {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.methodology-panel {
+  margin-top: 1rem;
+}
+
+.methodology-panel ul {
+  padding-left: 1.2rem;
+  line-height: 1.7;
 }
