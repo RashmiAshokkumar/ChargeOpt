@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+.env.*
+
+# Django
+*.sqlite3
+/media/
+/staticfiles/
+
+# Node
+node_modules/
+.next/
+out/
+coverage/
+
+# OS/files
+.DS_Store
+Thumbs.db
+
+# Project data
+/data-pipeline/data/*.csv
+/data-pipeline/results/*.json
+/data-pipeline/results/*.geojson
+/frontend/.env.local
+/backend/.env

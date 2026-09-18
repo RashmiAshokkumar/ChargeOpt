@@ -1,0 +1,18 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #f6f8fb;
+  color: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 100vh;
+}
+
+h1, h2, p, ul {
+  margin-top: 0;
+}
